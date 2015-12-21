@@ -12,7 +12,6 @@ import java.util.concurrent.Future;
 public class Checker {
     private static int timeout = 500;
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        System.out.print(args.length);
         if (args.length < 2 ){
             System.out.print("usage: java PortScanner ipAddress <number> <number> ... and or <range(num-num)>");
             System.exit(1);
@@ -21,7 +20,6 @@ public class Checker {
         ArrayList<Integer> range = new ArrayList<>();
         for (String s: args) {
 
-            System.out.print(s);
             String[] parts = s.split("-");
             if (parts.length < 2){
                 try {
